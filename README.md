@@ -11,7 +11,7 @@ In this repository you will find additional resources and guidelines about the K
 ## Guidelines
 
 * [01 Install and run a node](01-node-setup.md)
-* [02 A guideline for monitoring your node](01-monitoring.md)
+* [02 A guideline for monitoring your node](02-monitoring.md)
 
 ## Awesome Klever List
 
