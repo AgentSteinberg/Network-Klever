@@ -5,7 +5,7 @@
 This guideline holds instructions on how to install a Validator for the [Klever Blockchain](https://klever.finance/kleverchain/).
 The guide is based on the [official documentation](https://docs.klever.finance/klever-blockchain/how-to-run-a-node) but adds additional hints and instructions on the setup.
 
-## Prequisists
+## Prerequisite
 
 Hardware Requirements:
 
@@ -20,7 +20,7 @@ Although, the Klever node is able to run on MacOS and a wide range of linux dist
 
 ### Prepare the host Operating System
 
-1. Organize a Virtual Private Server (VPS) with Ubuntu 20.04 as operating system.
+1. Get a Virtual Private Server (VPS) with Ubuntu 20.04 as operating system.
 2. Make sure to update and secure your VPS. A good guideline, that was originally written by my buddy cryptonaut gordonfreeman can be found at <https://github.com/AgentSteinberg/VPS-First-Setup-Ubuntu>.
 3. Install Docker, which is needed to run the Klever node software. Follow instructions from <https://docs.docker.com/engine/install/>.
 4. Configure Docker to manage Docker as a non-root user as described at <https://docs.docker.com/engine/install/linux-postinstall/>.
@@ -186,6 +186,9 @@ docker run -it --rm --user "$(id -u):$(id -g)" \
 
 Hint: You can find the `<BUCKET_ID>` also in the transaction using the [Klever Explorer](https://testnet.kleverscan.org/accounts).
 
+Done! You are now successfully staking with your node and producing blocks.
+
+Hint for the testnet: This is where you need to wait for additional delegation of 8.5M TKLV to be send to you by the Klever admins.
 
 
 
@@ -193,8 +196,7 @@ Hint: You can find the `<BUCKET_ID>` also in the transaction using the [Klever E
 
 
 
-
-
+---
 
 ## Command Reference
 

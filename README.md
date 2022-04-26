@@ -1,5 +1,7 @@
 # Klever
 
+![Klever Finance Ecosystem](./assets/logo.png)
+
 ## Overview
 
 The [Klever Finance Ecosystem](https://klever.finance/) has the goal to create innovative, easy-to-use and secure products powered by peer-to-peer and blockchain technologies. It is powered by a professional crypto company and a community of crypto enthusiasts which are involved in building, running, improving and supporting the Klever blockchain.
@@ -8,7 +10,8 @@ In this repository you will find additional resources and guidelines about the K
 
 ## Guidelines
 
-* [01 Install and run a Node](01-node-setup.md)
+* [01 Install and run a node](01-node-setup.md)
+* [02 A guideline for monitoring your node](01-monitoring.md)
 
 ## Awesome Klever List
 
@@ -25,4 +28,16 @@ Here is a list of valueable links to Klever resources:
 
 ### Community
 
+* [Klever Discord Community](https://discord.gg/klever-io) Interact with members of the Klever community.
+
 ### Developer Resource
+
+* [Official Klever Docs](https://docs.klever.finance) The first place to look for developer information.
+* <https://github.com/KleverMaik/klever-node-toolkit> The "klever-node-toolkit" is a collection of different scripts to perform available operations provided by the "operator" application and the node API itself.
+* <https://github.com/KingStake21/Klever> Grafana dashboard from KingStake21.
+
+### Community Guidelines and Blogs
+
+* <https://vps1tt3r.medium.com/> Guildelines and articles about Klever.
+* <https://www.stakeapex.com/blog> Blog about Klever.
+

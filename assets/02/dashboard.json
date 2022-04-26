@@ -1,0 +1,1246 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 4,
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "MOONINGLABS",
+        "tooltip": "",
+        "type": "link",
+        "url": "https://mooninglabs.com"
+      }
+    ],
+    "liveNow": true,
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 176,
+        "panels": [],
+        "title": "Blockchain",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "transparent",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 3,
+          "x": 0,
+          "y": 1
+        },
+        "id": 134,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_epoch_number",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Current Epoch",
+            "refId": "A"
+          }
+        ],
+        "title": "Current Epoch",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "transparent",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 10,
+          "x": 3,
+          "y": 1
+        },
+        "id": 140,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "BnaXei87k"
+            },
+            "exemplar": false,
+            "expr": "klv_current_slot",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Current Slot",
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_slots_per_epoch",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Slots Per Epoch",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_slot_duration / 1000",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Seconds Per Block",
+            "refId": "B"
+          }
+        ],
+        "title": "Slots",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 13,
+          "y": 1
+        },
+        "id": 177,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_live_validator_nodes",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Live Validators",
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_num_validators",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Epoch Validators",
+            "refId": "C"
+          }
+        ],
+        "title": "Validators",
+        "type": "stat"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 6
+        },
+        "id": 174,
+        "panels": [],
+        "title": "Node",
+        "type": "row"
+      },
+      {
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 6,
+          "x": 0,
+          "y": 7
+        },
+        "id": 172,
+        "options": {
+          "legend": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "displayMode": "list",
+            "placement": "bottom"
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "BnaXei87k"
+            },
+            "exemplar": true,
+            "expr": "klv_num_connected_peers",
+            "instant": false,
+            "interval": "",
+            "legendFormat": "#Connected Peers",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "BnaXei87k"
+            },
+            "exemplar": true,
+            "expr": "klv_connected_nodes",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "#Connected Nodes",
+            "refId": "B"
+          }
+        ],
+        "title": "Nodes",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 2,
+          "x": 6,
+          "y": 7
+        },
+        "id": 154,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_connected_nodes",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Connected Nodes",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_num_connected_peers",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Connected Peers",
+            "refId": "D"
+          }
+        ],
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [
+              {
+                "options": {
+                  "0": {
+                    "color": "dark-green",
+                    "index": 0,
+                    "text": "IN SYNC"
+                  }
+                },
+                "type": "value"
+              },
+              {
+                "options": {
+                  "from": 1,
+                  "result": {
+                    "color": "red",
+                    "index": 1,
+                    "text": "SYNC IN PROGRESS"
+                  },
+                  "to": 100
+                },
+                "type": "range"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "dark-red",
+                  "value": 1
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 8,
+          "y": 7
+        },
+        "id": 160,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_is_syncing",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "title": "Node Status",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-purple",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 13,
+          "y": 7
+        },
+        "id": 136,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_count_leader",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Proposed Blocks",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_count_accepted_blocks",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Accepted Blocks",
+            "refId": "B"
+          }
+        ],
+        "title": "Total Validator Blocks",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "7hZYs7U7k"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [
+              {
+                "options": {
+                  "observer": {
+                    "color": "yellow",
+                    "index": 0
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 8,
+          "y": 12
+        },
+        "id": 183,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "/^klv_node_type 100009$/",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "7hZYs7U7k"
+            },
+            "query": "from(bucket: \"Klever\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"klever-node-status\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"klv_node_type\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+            "refId": "A"
+          }
+        ],
+        "title": "Node State",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-purple",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 13,
+          "y": 12
+        },
+        "id": 138,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_count_consensus",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Validator Signed",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_count_consensus_accepted_blocks",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Validator Accepted",
+            "refId": "B"
+          }
+        ],
+        "title": "Validator Signed / Accepted Blocks",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "semi-dark-red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 0,
+          "y": 17
+        },
+        "id": 146,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_mem_load_percent",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Memory Usage %",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_cpu_load_percent",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "CPU Usage %",
+            "refId": "B"
+          }
+        ],
+        "title": "Resources",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "7hZYs7U7k"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "auto",
+              "displayMode": "color-text",
+              "filterable": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 7,
+          "x": 6,
+          "y": 17
+        },
+        "id": 185,
+        "options": {
+          "footer": {
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": false
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "7hZYs7U7k"
+            },
+            "query": "from(bucket: \"Klever\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"klever-node-status\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"klv_node_type\" or r[\"_field\"] == \"klv_app_version\" or r[\"_field\"] == \"klv_consensus_slot_state\" or r[\"_field\"] == \"klv_consensus_state\" or r[\"_field\"] == \"klv_node_display_name\")\r\n  |> last(column: \"_value\")\r\n  |> group()",
+            "refId": "A"
+          }
+        ],
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "_measurement": true,
+                "_start": true,
+                "_stop": true,
+                "_time": true,
+                "chain_id": true
+              },
+              "indexByName": {
+                "_field": 3,
+                "_measurement": 5,
+                "_start": 0,
+                "_stop": 1,
+                "_time": 2,
+                "_value": 4,
+                "chain_id": 6
+              },
+              "renameByName": {
+                "chain_id": ""
+              }
+            }
+          }
+        ],
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "super-light-purple",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 13,
+          "y": 17
+        },
+        "id": 144,
+        "options": {
+          "colorMode": "background",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_highest_final_nonce",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Block Height",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_probable_highest_nonce",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "Node Height",
+            "refId": "C"
+          }
+        ],
+        "title": "Synced Slots",
+        "type": "stat"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 22
+        },
+        "id": 179,
+        "panels": [],
+        "title": "Transactions",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 8,
+          "x": 0,
+          "y": 23
+        },
+        "id": 170,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "hidden",
+            "placement": "bottom"
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.4.2",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": true,
+            "expr": "klv_tx_pool_load",
+            "format": "time_series",
+            "instant": false,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "title": "Transaction Pool Load",
+        "type": "timeseries"
+      },
+      {
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 8,
+          "y": 23
+        },
+        "id": 181,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "horizontal",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "BnaXei87k"
+            },
+            "exemplar": true,
+            "expr": "klv_tx_pool_load",
+            "interval": "",
+            "legendFormat": "Load",
+            "refId": "A"
+          }
+        ],
+        "title": "Current Load",
+        "type": "bargauge"
+      },
+      {
+        "datasource": {
+          "type": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 5,
+          "x": 13,
+          "y": 23
+        },
+        "id": 158,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "8.4.5",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus"
+            },
+            "exemplar": false,
+            "expr": "klv_peak_tps",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "TX Peak",
+            "refId": "A"
+          }
+        ],
+        "title": "Peak Load",
+        "type": "stat"
+      }
+    ],
+    "refresh": "1h",
+    "schemaVersion": 35,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-3h",
+      "to": "now"
+    },
+    "timepicker": {
+      "hidden": false,
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "title": "Klever Node",
+    "uid": "-V7eD78nz",
+    "version": 9,
+    "weekStart": "monday"
+  }
