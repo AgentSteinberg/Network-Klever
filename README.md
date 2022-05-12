@@ -12,6 +12,7 @@ In this repository you will find additional resources and guidelines about the K
 
 * [01 Install and run a node](01-node-setup.md)
 * [02 A guideline for monitoring your node](02-monitoring.md)
+* [03 Delegating to other validators](03-delegating.md)
 
 ## Awesome Klever List
 
