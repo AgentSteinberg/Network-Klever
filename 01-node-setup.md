@@ -237,7 +237,7 @@ tar -czvf filename.tar.gz $(pwd)/node/db
 docker restart klever-node
 ```
 
-### How to backup node data
+### How to upgrade node
 
 Stop node first.
 
