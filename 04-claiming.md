@@ -15,7 +15,7 @@ docker run -it --rm --user "$(id -u):$(id -g)" \
     --entrypoint=/usr/local/bin/operator \
     kleverapp/klever-go-testnet:latest \
     --key-file=./walletKey.pem \
-    --node=https://node.testnet.klever.finance \ 
+    --node=https://node.testnet.klever.finance \
     account claim <CLAIM_TYPE> --id=KLV
 ```
 
