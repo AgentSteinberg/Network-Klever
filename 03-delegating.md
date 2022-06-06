@@ -6,6 +6,8 @@ Delegating Klever ist similar to staking.
 At first it is necessary to freeze a specific amount of KLV. After that you can delegate the frozen Klever to another Validator by using
 the transaction id.
 
+Note: All delegations are made from a seconds wallet, which is stored in the `delegate-wallet` directory.
+
 ## Delegating
 
 ### Freeze the KLV
@@ -14,7 +16,7 @@ Let's start with freezing 1000 KLV (which is the minimum amount).
 
 ```
 docker run -it --rm --user "$(id -u):$(id -g)" \
-    -v $(pwd)/wallet:/opt/klever-blockchain \
+    -v $(pwd)/delegate-wallet:/opt/klever-blockchain \
     --network=host \
     --entrypoint=/usr/local/bin/operator \
     kleverapp/klever-go-testnet:latest \
@@ -28,7 +30,7 @@ Use the transaction id of the freeze transaction to get the <BUCKET_ID>.
 
 ```
 docker run -it --rm --user "$(id -u):$(id -g)" \
-    -v $(pwd)/wallet:/opt/klever-blockchain \
+    -v $(pwd)/delegate-wallet:/opt/klever-blockchain \
     --network=host \
     --entrypoint=/usr/local/bin/operator \
     kleverapp/klever-go-testnet:latest \
@@ -44,7 +46,7 @@ Hint: To find accounts to delegate to, you want to check the validator list in t
 
 ```
 docker run -it --rm --user "$(id -u):$(id -g)" \
-    -v $(pwd)/wallet:/opt/klever-blockchain \
+    -v $(pwd)/delegate-wallet:/opt/klever-blockchain \
     --network=host \
     --entrypoint=/usr/local/bin/operator \
     kleverapp/klever-go-testnet:latest \
@@ -54,3 +56,5 @@ docker run -it --rm --user "$(id -u):$(id -g)" \
     <ACCOUNT> \
     --bucketID=<BUCKET_ID>
 ```
+
+The delegated amount can be checked in the transaction list.
