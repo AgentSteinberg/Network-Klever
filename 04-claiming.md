@@ -2,7 +2,7 @@
 
 ## About 
 
-When you stake or delegate you KLV, you will earn addition KLV as incentive. The actually get those KLV you need to "claim" thos.
+When you stake or delegate you KLV, you will earn addition KLV as incentive. The actually get those KLV you need to "claim" those.
 
 ## Claiming
 
