@@ -58,3 +58,5 @@ docker run -it --rm --user "$(id -u):$(id -g)" \
 ```
 
 The delegated amount can be checked in the transaction list.
+        
+Note: To redelegate, you just need to keep the same Bucket ID and type a new address to whom the delegation will be done.
